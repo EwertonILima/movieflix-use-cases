@@ -24,7 +24,6 @@ public class UserDTO implements Serializable {
 		id = entity.getId();
 		name = entity.getName();
 		email = entity.getEmail();
-		;
 	}
 
 	public Long getId() {
