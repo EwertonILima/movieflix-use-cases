@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "tb_genre")
 public class Genre {
@@ -19,6 +21,7 @@ public class Genre {
 	private Long id;
 	private String name;
 
+	@JsonIgnore
 	@OneToMany(mappedBy = "genre")
 	private Set<Movie> movies = new HashSet<>();
 
